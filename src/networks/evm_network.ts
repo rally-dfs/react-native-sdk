@@ -23,7 +23,7 @@ import type {
 
 import { MetaTxMethod } from '../gsnClient/utils';
 import { getProvider } from '../provider';
-import type { TokenConfig } from 'src/transactions/supported_tokens';
+import type { TokenConfig } from '../transactions/supported_tokens';
 
 async function transfer(
   destinationAddress: string,

@@ -14,6 +14,8 @@ import {
 } from './network_config/network_config';
 import { BaseSepoliaNetworkConfig } from './network_config/network_config_base_sepolia';
 import { BaseNetworkConfig } from './network_config/network_config_base';
+import type { TokenConfig } from './transactions/supported_tokens';
+
 
 export interface Network {
   networkConfig: NetworkConfig;
@@ -30,7 +32,8 @@ export interface Network {
     destinationAddress: string,
     amount: string,
     tokenAddress?: PrefixedHexString,
-    metaTxMethod?: MetaTxMethod
+    metaTxMethod?: MetaTxMethod,
+    tokenConfig?: TokenConfig
   ) => Promise<string>;
   claimRly: () => Promise<string>;
   //Deprecated please use claimRly instead
